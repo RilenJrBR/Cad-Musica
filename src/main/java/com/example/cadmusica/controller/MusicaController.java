@@ -1,5 +1,5 @@
 package com.example.cadmusica.controller;
 
-public class MusicController {
+public class MusicaController {
     
 }
