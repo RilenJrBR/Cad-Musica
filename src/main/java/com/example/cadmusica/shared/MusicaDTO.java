@@ -1,15 +1,10 @@
 package com.example.cadmusica.shared;
 
-import javax.validation.constraints.NotBlank;
-
 import com.example.cadmusica.model.Musica;
 
 public class MusicaDTO {
 
-    @NotBlank(message = "Nome deve ser prenchido com um titulo valido.")
     private String titulo;
-    
-    @NotBlank(message = "Nome deve ser prenchido com um album valido.")
     private String album;
     private int anoLancamento;
     

@@ -1,5 +1,8 @@
 package com.example.cadmusica.controller;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import com.example.cadmusica.model.Musica;
 import com.example.cadmusica.service.MusicaService;
 import com.example.cadmusica.shared.MusicaDTO;
@@ -7,6 +10,7 @@ import com.example.cadmusica.shared.MusicaDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,5 +28,18 @@ public class MusicaController {
         Musica musicaSalva = servico.salvar(musica);
         MusicaDTO dtoresponse =  MusicaDTO.from(musicaSalva);
         return new ResponseEntity<>(dtoresponse, HttpStatus.CREATED);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<MusicaDTO>> obterTodasMusica(@RequestBody MusicaDTO dto){
+        List<Musica> musica = servico.obterTodasMusica();
+
+        List<MusicaDTO> dtos = musica
+
+            .stream()
+            .map(MusicaDTO::from)
+            .collect(Collectors.toList());
+
+        return new ResponseEntity<>(dtos, HttpStatus.OK);
     }
 }
