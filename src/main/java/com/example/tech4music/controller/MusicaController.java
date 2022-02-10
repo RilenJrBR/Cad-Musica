@@ -1,11 +1,11 @@
-package com.example.cadmusica.controller;
+package com.example.tech4music.controller;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.example.cadmusica.model.Musica;
-import com.example.cadmusica.service.MusicaService;
-import com.example.cadmusica.shared.MusicaDTO;
+import com.example.tech4music.model.Musica;
+import com.example.tech4music.service.MusicaService;
+import com.example.tech4music.shared.MusicaDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/musica")
+@RequestMapping("api/tech4music")
 public class MusicaController {
     @Autowired
     private MusicaService servico;

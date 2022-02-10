@@ -1,8 +1,8 @@
-package com.example.cadmusica.service;
+package com.example.tech4music.service;
 
 import java.util.List;
 
-import com.example.cadmusica.model.Musica;
+import com.example.tech4music.model.Musica;
 
 public interface MusicaService {
     Musica salvar(Musica musica);

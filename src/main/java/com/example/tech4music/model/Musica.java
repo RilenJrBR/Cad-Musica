@@ -1,6 +1,6 @@
-package com.example.cadmusica.model;
+package com.example.tech4music.model;
 
-import com.example.cadmusica.shared.MusicaDTO;
+import com.example.tech4music.shared.MusicaDTO;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -13,14 +13,15 @@ public class Musica {
     private String album;
     private String genero;
     private Integer anoLancamento;
-    private String compositor;
-    
-    public Musica(String titulo, String album, Integer anoLancamento) {
+    private String compositor;    
+
+    public Musica(String titulo, String album, String genero, Integer anoLancamento, String compositor) {
         this.titulo = titulo;
         this.album = album;
+        this.genero = genero;
         this.anoLancamento = anoLancamento;
+        this.compositor = compositor;
     }
-
     public String getId() {
         return id;
     }
@@ -59,7 +60,8 @@ public class Musica {
     }      
      
     public static Musica from(MusicaDTO dto){
-        return new Musica(dto.getTitulo(), dto.getAlbum(), dto.getAnoLancamento());
+        return new Musica(dto.getTitulo(), dto.getAlbum(), dto.getGenero(), 
+        dto.getAnoLancamento(), dto.getCompositor());
     }
    
 }

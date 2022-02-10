@@ -1,10 +1,10 @@
-package com.example.cadmusica;
+package com.example.tech4music;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CadmusicaApplicationTests {
+class Tech4musicApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,9 +1,9 @@
-package com.example.cadmusica.service;
+package com.example.tech4music.service;
 
 import java.util.List;
 
-import com.example.cadmusica.model.Musica;
-import com.example.cadmusica.repository.MusicaRepository;
+import com.example.tech4music.model.Musica;
+import com.example.tech4music.repository.MusicaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
-package com.example.cadmusica.repository;
+package com.example.tech4music.repository;
 
-import com.example.cadmusica.model.Musica;
+import com.example.tech4music.model.Musica;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
