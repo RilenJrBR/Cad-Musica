@@ -2,7 +2,11 @@ package com.example.tech4music.shared;
 
 import com.example.tech4music.model.Musica;
 
-public class MusicaDTO {    
+import org.springframework.data.annotation.Id;
+
+public class MusicaDTO { 
+    @Id
+    private String id;   
     private String titulo;
     private String album;
     private String genero;
@@ -51,5 +55,5 @@ public class MusicaDTO {
     public static MusicaDTO from(Musica musica){
         return new MusicaDTO(musica.getTitulo(), musica.getAlbum(), musica.getGenero(), 
         musica.getAnoLancamento(), musica.getCompositor());
-    }
+    }    
 }
