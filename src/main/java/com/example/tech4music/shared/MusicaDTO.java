@@ -10,16 +10,24 @@ public class MusicaDTO {
     private String titulo;
     private String album;
     private String genero;
-    private int anoLancamento;
+    private Integer anoLancamento;
     private String compositor;
     
     
-    public MusicaDTO(String titulo, String album, String genero, int anoLancamento, String compositor) {
+    public MusicaDTO(String id, String titulo, String album, String genero, Integer anoLancamento, String compositor) {
+        this.id = id;
         this.titulo = titulo;
         this.album = album;
         this.genero = genero;
         this.anoLancamento = anoLancamento;
         this.compositor = compositor;
+    }
+
+    public String getId() {
+        return id;
+    }    
+    public void setId(String id) {
+        this.id = id;
     }
     public String getTitulo() {
         return titulo;
@@ -53,7 +61,7 @@ public class MusicaDTO {
     }      
 
     public static MusicaDTO from(Musica musica){
-        return new MusicaDTO(musica.getTitulo(), musica.getAlbum(), musica.getGenero(), 
+        return new MusicaDTO(musica. getId(), musica.getTitulo(), musica.getAlbum(), musica.getGenero(), 
         musica.getAnoLancamento(), musica.getCompositor());
-    }    
+    }
 }

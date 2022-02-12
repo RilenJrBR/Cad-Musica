@@ -7,4 +7,6 @@ import com.example.tech4music.model.Musica;
 public interface MusicaService {
     Musica salvar(Musica musica);
     List<Musica> obterTodasMusica();
+    Musica atualizar(String id, Integer anoLancamento);
+    void deletarMusica(String id);
 }
