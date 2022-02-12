@@ -1,15 +1,8 @@
 package com.example.tech4music.shared;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-
 import com.example.tech4music.model.Musica;
 
 public class AtualizarDTO {
-    @NotBlank(message = "O id precisa ser preenchido com valores válidos.")
-    @NotEmpty(message = "O id precisa ser preenchido.")
-    @NotNull(message = "O id precisa ser um valor válido.")
     private String id;
     private Integer anoLancamento;
     
