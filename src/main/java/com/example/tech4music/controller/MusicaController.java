@@ -47,7 +47,7 @@ public class MusicaController {
         return new ResponseEntity<>(dtos, HttpStatus.OK);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public AtualizarDTO atualizarMusica(@RequestBody MusicaDTO dto) {
         Musica musica = servico.atualizar(dto.getId(), dto.getAnoLancamento());
         return AtualizarDTO.parse(musica);
